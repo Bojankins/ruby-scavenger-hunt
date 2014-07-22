@@ -12,8 +12,15 @@ require_relative '../lib/vector'
 
     def test_push_integer_into_vector
     	@v2 = Myvector[1,2]
-    	assert_equal true, @v2 << 2
+    	assert_equal Vector[1, 2, 2], @v2 << 2
     end
+
+    def test_radian_of_angle
+    	@v3 = Myvector[1,1]
+    	assert_equal 3.6761417867835356e-10, @v3.cosine_theta(@v3)
+    end
+
+
   end
 
 $end
